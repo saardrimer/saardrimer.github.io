@@ -1,0 +1,26 @@
+@inproceedings{DrimerGP_NewAESRecipes_FCCM08,
+  author       = {Saar Drimer and Tim G{\"{u}}neysu and Christof Paar},
+  title        = {{DSPs}, {BRAMs} and a pinch of logic: new recipes for {AES} on {FPGAs}},
+  booktitle    = {IEEE Symposium on Field-Programmable Custom Computing Machines},
+  month        = {April},
+  year         = {2008},
+  location     = {Palo Alto, California, USA},
+  publisher    = {IEEE},
+  url          = {http://www.cl.cam.ac.uk/~sd410/papers/aes_dsp.pdf},
+  abstract     = {We present an AES cipher implementation that is based on the 
+  BlockRAM and DSP units embedded within Xilinx's Virtex-5 FPGAs. An iterative 
+  ``basic'' module outputs a 32 bit column of an AES round each clock cycle, 
+  with a throughput of 1.76 Gbit/s when processing two 128 bit inputs. This 
+  construct is replicated four times for a 128 bit datapath for a full AES round 
+  with 6.21 Gbit/s throughput when processing eight inputs. Finally, the ``round'' 
+  module is replicated ten times for a fully unrolled design that yields over 
+  55 Gbit/s of throughput. The combination and arrangement of the specialized 
+  embedded functions available in the FPGA allows us to implement our designs 
+  using very few traditional user logic elements such as flip-flops and lookup 
+  tables, yet still achieve these high throughputs. The complete source code 
+  for these designs is made publicly available for use in further research and 
+  for replicating our results. Our contribution ends with a discussion of 
+  comparing cipher implementations in the literature, and why these comparisons 
+  can be meaningless without a common reporting style, platform, or within the 
+  context of a specific constrained application.},
+}

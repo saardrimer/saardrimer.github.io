@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Strict//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="keywords" content="">
+  <meta name="Description" content="Saar Drimer">
+  <meta http-equiv="keywords" content="">
+  <meta http-equiv="Description" content="">
+  <meta http-equiv="Content-Language" content="en-us">
+
+  <link rel="stylesheet" type="text/css" href="aes.css">
+
+  <title>Verilog source code for "DSPs, BRAMs and a pinch of logic: new recipes for AES on FPGAs"</title>
+</head>
+<body>
+
+<p></p><center><div class="main">
+
+<p></p><center><span style="font-weight:bold;font-size:18px;text-align:center;"></span></center><p></p>
+
+<p><strong><a href="http://www.saardrimer.com/sd410/papers/aes_dsp.pdf">DSPs, BRAMs and a pinch of logic: new recipes for AES on FPGAs</a></strong> by
+</p><p><a href="http://www.saardrimer.com/sd410">Saar Drimer</a>, Computer Laboratory, University of Cambridge, UK <br>
+<a href="http://www.crypto.ruhr-uni-bochum.de/gueneysu.html">Tim G&uuml;neysu</a>, Horst G&ouml;rtz institute for IT security, Ruhr University Bochum, Germany<br>
+<a href="http://www.crypto.ruhr-uni-bochum.de/en_paar.html">Christof Paar</a>, Horst G&ouml;rtz institute for IT security, Ruhr University Bochum, Germany<br>
+</p><p><span style="font-size:10px">(Presented at <a href="http://www.fccm.org/">Field-Programmable Custom Computing Machines</a>, 14 April 2008)</span>
+</p><center>
+<p></p><div class="abs">
+<p><strong>Abstract:</strong>
+</p><p>We present an AES cipher implementation that is based on the 
+BlockRAM and DSP units embedded within Xilinx's Virtex-5 FPGAs. An 
+iterative "basic" module outputs a 32 bit column of an AES round each 
+clock cycle, with a throughput of 1.76 Gbit/s when processing two 128 
+bit inputs. This construct is replicated four times for a 128 bit 
+datapath for a full AES round with 6.21 Gbit/s throughput when 
+processing eight inputs. Finally, the "round" module is replicated ten 
+times for a fully unrolled design that yields over 55 Gbit/s of 
+throughput. The combination and arrangement of the specialized embedded 
+functions available in the FPGA allows us to implement our designs using
+ very few traditional user logic elements such as flip-flops and lookup 
+tables, yet still achieve these high throughputs. The complete source 
+code for these designs is made publicly available for use in further 
+research and for replicating our results. Our contribution ends with a 
+discussion of comparing cipher implementations in the literature, and 
+why these comparisons can be meaningless without a common reporting 
+style, platform, or within the context of a specific constrained 
+application.
+</p></div>
+
+<p><strong>Here you will find the Verilog source code for the three AES designs described in the above paper</strong></p>
+</center>
+
+<img alt="AES basic cell" src="cell.png">
+<p>In the <a href="http://www.saardrimer.com/sd410/papers/aes_dsp.pdf">paper</a> we describe three variants for an AES implementation on Xilinx <a href="http://www.xilinx.com/products/silicon_solutions/fpgas/virtex/virtex5/index.htm">Virtex-5</a> devices: "basic", "round", and "unrolled". Supplied here is the Verilog code for these designs and <a href="http://toolbox.xilinx.com/docsan/xilinx8/books/data/docs/dev/dev0191_28.html">XFLOW</a> commands for replicating the results we report, which are summarized in the table below.</p>
+
+<p>The results were achieved using XST and <a href="http://www.xilinx.com/ise/logic_design_prod/foundation.htm">ISE</a>
+ version 9.2i.03, so if you compile the code using a different version, 
+then you may get different results (might even exceed them). You will 
+need to download the zip file below and use the command-line <a href="http://toolbox.xilinx.com/docsan/xilinx8/books/data/docs/dev/dev0191_28.html">XFLOW</a> program that is part of the ISE suite of tools.</p>
+
+<p>
+
+</p><table>
+
+<tbody><tr>
+  <th>design</th>
+  <th>slices</th>
+  <th>LUTs</th>
+  <th>FFs</th>
+  <th>BRAMs</th>
+  <th>DSPs</th>
+  <th>freq.</th>
+  <th>throughput</th>
+</tr>
+<tr>
+  <th>basic</th>
+  <td>93</td>
+  <td>245</td>
+  <td>274</td>
+  <td>2</td>
+  <td>4</td>
+  <td>550 MHz</td>
+  <td>1.76 Gbit/s (2 inputs)</td>
+</tr>
+<tr>
+  <th>round</th>
+  <td>277</td>
+  <td>204</td>
+  <td>601</td>
+  <td>8</td>
+  <td>16</td>
+  <td>485 MHz</td>
+  <td>6.21 Gbit/s (8 inputs)</td>
+</tr>
+<tr>
+  <th>unrolled</th>
+  <td>428</td>
+  <td>672</td>
+  <td>992</td>
+  <td>80</td>
+  <td>160</td>
+  <td>430 MHz</td>
+  <td>55 Gbit/s</td>
+</tr>
+
+</tbody><caption>Results for the three AES variants</caption>
+
+</table>
+
+</div>
+
+<div class="main2">
+<p><strong>Source code</strong>
+</p><p><a href="http://www.saardrimer.com/sd410/aes/aes_dsp.zip">aes_dsp.zip</a> (2008-02-09 version 1.1: corrected typos; modules are in own directories with XFLOW option files.)
+
+</p><p>The source code included in the above file is provided under the "<a href="http://en.wikipedia.org/wiki/BSD_license">Simplified BSD License</a>",
+ which means that you may freely use and modify the code as long as the 
+copyright notice stays intact in the code or the documentation 
+accompanying a binary/product (see readme.txt in the zip file for more 
+details).
+
+</p><p><em>For our satisfaction of knowing this implementation has been 
+useful, please do try to let us know if you have used it in a product or
+ academic paper.</em>
+
+</p><p><strong>Notes</strong>
+</p><p>The content of the BRAMs in the "unrolled" module is T(E)0, 
+T(E)0', T(E)1, and T(E)1' for the first BRAM, and T(E)2, T(E)2', T(E)3, 
+and T(E)3' for the other, for every instance. There is a control signal 
+that tells the last round's instance to switch to Tn'. In other words, 
+only 16 Kbits are used in each BRAM. Thus, if decryption is also needed,
+ for the first nine rounds use T(E)0, T(D)0, T(E)1, and T(D)1 for the 
+first BRAM, and T(E)2, T(D)2, T(E)3, and T(D)3. For the last round's 
+BRAMs use the respective T(E/D)n' T-tables.   
+</p></div>
+
+<center><span style="font-size:10px;text-align:center;">last edited 2008/8/3</span></center>
+
+
+
+</center></body></html>

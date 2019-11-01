@@ -1,0 +1,79 @@
+body {
+  font-family: verdana, arial, helvetica, "sans serif";
+  text-align: left;
+  font-size: 12px;
+  letter-spacing: 0px;
+  color: darkblue;
+  background-color: white;
+  margin: 15px;
+}
+
+.main {
+  background-color: #e0ecff;
+  border: 1px solid #BABABA;
+  text-align: left;
+  padding: 10px;
+  font-size: 12px;
+  margin: 0px 0px 2px 0px;
+  vertical-align: middle;
+  display: block;
+  width: 786px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table td {
+  text-align: left;
+  padding: 5px;
+  font-size: 12px;  
+}
+
+.bibtex {
+  width: 809px;
+  font-family: courier;
+  letter-spacing: -0.1em;
+  font-size: 10px;
+  border: 1px solid #f8f8ff;
+  white-space: pre-wrap;
+}
+
+h2, h3 {
+  padding: 0px;
+  margin: 0px;
+  display:inline;
+}
+
+.abstract {
+  width: 809px;
+  border: 1px solid #f8f8ff;
+}
+
+.showstate {
+  cursor:pointer;
+  float: left;
+  margin: 1px 4px 3px 2px;
+}
+
+.headers {
+  width: 800px;
+  font-size: 12px;
+  font-weight: normal;
+  border: 0px solid black;
+  margin: 2px 0px 0px 0px;
+  background-color: #e8f8ff;
+  padding: 4px;
+}
+
+.switchcontent {
+  width: 809px;
+}
+
+
+

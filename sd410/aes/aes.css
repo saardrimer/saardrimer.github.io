@@ -1,0 +1,96 @@
+
+body {
+  font-family: verdana, arial, helvetica, "sans serif";
+  text-align: center;
+  letter-spacing: 0px;
+  color: darkblue;
+  background-color: white;
+  margin: 15px;
+}
+
+.main {
+  background-color: #e0ecff;
+  border: 1px solid #BABABA;
+  text-align: left;
+  padding: 10px;
+  font-size: 12px;
+  margin: 0px 0px 2px 0px;
+  vertical-align: middle;
+  display: block;
+  width: 650px;
+}
+
+.main2 {
+  background-color: #e8f8ff;
+  border: 1px solid #BABABA;
+  text-align: left;
+  padding: 10px;
+  font-size: 12px;
+  margin: 0px 0px 2px 0px;
+  vertical-align: middle;
+  display: block;
+  width: 650px;
+}
+
+.abs {
+  background-color: #FFFFFF;
+  border: 1px solid lightgray;
+  text-align: left;
+  padding: 0px 12px 0px 12px;
+  font-size: 12px;
+  vertical-align: middle;
+  display: block;
+  width: 455px;
+  text-align: justify;
+  line-height: 16px;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.main img {
+  float: right;
+  margin: 10px;
+}
+
+table {
+  text-align: center;
+  width: 650px;
+	border-width: 1px 1px 1px 1px;
+	border-spacing: 2px;
+	border-style: outset outset outset outset;
+	border-color: blue blue blue blue;
+	border-collapse: collapse;
+	caption-side: bottom;
+}
+
+table th {
+	border-width: 1px 1px 1px 1px;
+	padding: 3px 5px 3px 5px;
+	border-style: inset inset inset inset;
+	border-color: lightgray lightgray lightgray lightgray;
+	background-color: white;
+}
+
+table td {
+  background-color: #e8f8ff;
+	border-width: 1px 1px 1px 1px;
+	padding: 3px 5px 3px 5px;
+	border-style: inset inset inset inset;
+	border-color: lightgray lightgray lightgray lightgray;
+	background-color: white;
+}
+
+table caption {
+  font-weight: bold;
+  caption-side: bottom; 
+  width: auto;
+  text-align: center; 
+}
+
