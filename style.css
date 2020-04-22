@@ -11,14 +11,12 @@ body {
     background-color: var(--gray-h);
     color: var(--gray-l);
     font-size: 1.2em;
-    padding-left: 3em;
-    padding-top: 1.5em;
-    padding-bottom: 3em;
-    padding-right: 3em;
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
     width: 100%;
     max-width: 38em;
-    margin-top: 1em;
-    margin-left: 1em;
     margin: auto;
     margin-top: 1em;
     margin-bottom: 1em;
@@ -29,7 +27,6 @@ img {
     margin-left: auto;
     margin-right: auto;
     max-width: 100%;
-    max-height: 100%;
 }
 
 .lighter {
@@ -67,10 +64,6 @@ li {
     padding-left: 1em;
     padding-bottom: 1em;
     line-height: 1.4em;
-}
-
-em {
-    font-style: normal;
 }
 
 h2.underline {
