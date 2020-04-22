@@ -11,10 +11,8 @@ body {
     background-color: var(--gray-h);
     color: var(--gray-l);
     font-size: 1.2em;
-    padding-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 1em;
+    line-height: 1.6em;
+    padding: 0.6em;
     width: 100%;
     max-width: 38em;
     margin: auto;
@@ -33,10 +31,6 @@ img {
     color: var(--gray-m);
 }
 
-p {
-    line-height: 1.6em;
-}
-
 a {
     border-bottom: 0.3em ridge var(--green);
     border-radius: 0px 0px 6px 6px;
@@ -49,7 +43,6 @@ a:hover {
 }
 
 hr {
-    border: 0;
     border-bottom: 10px ridge var(--red);
     border-radius: 6px 6px 6px 6px;
 }
