@@ -1,7 +1,15 @@
 body {
+    --gray-l: #dbdbdd;
+    --gray-m: #9c8e8e;
+    --blue: #524ba3;
+    --gray-h: #1f1e23;
+    --green: #6a9254;
+    --yellow: #dcac6c;
+    --red: #e55656;
+    --brown: #73493c;
     font-family: "Source Code Pro", serif;
-    background-color: #3c3635;
-    color: #dfdbd6;
+    background-color: var(--gray-h);
+    color: var(--gray-l);
     font-size: 1.2em;
     padding-left: 3em;
     padding-top: 1.5em;
@@ -11,76 +19,66 @@ body {
     max-width: 38em;
     margin-top: 1em;
     margin-left: 1em;
-    border-color: #134679;
-    border-width: 0 2em 0 2em;
-    border-style: solid;
-    border-radius: 3em;
     margin: auto;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .lighter {
-    color: #807c78;
+    color: var(--gray-m);
 }
 
 p {
-    padding-bottom: -10px;
+    line-height: 1.6em;
 }
 
 a {
-    color: #53a555;
+    border-bottom: 0.3em ridge var(--green);
+    border-radius: 0px 0px 6px 6px;
+    color: inherit;
     text-decoration: none;
 }
 
 a:hover {
-    color: #dfdbd6;
-    text-decoration: underline;
+    color:var(--green);
 }
 
 hr {
     border: 0;
-    border-top: 2px dashed #134679;
+    border-bottom: 10px ridge var(--red);
+    border-radius: 6px 6px 6px 6px;
 }
 
 ul {
     padding: 0;
-    margin-bottom: 2em;
+    margin:0;
     list-style: none;
 }
 
 li {
-    padding-top: 16px;
-}
-
-ul li::before {
-    content: "\2015\2015";
-    color: #134679;
-    font-weight: bold;
-    display: inline-block;
-    width: 3em;
-    margin-left: -3em;
+    padding-left: 1em;
+    padding-bottom: 1em;
+    line-height: 1.4em;
 }
 
 em {
-    color: #ec4b42;
     font-style: normal;
 }
 
-h2.header {
-    margin-top: 2em;
-    text-align: center;
-    max-width: 55em;
+h2.underline {
+    text-align: left;
+    border-bottom: 0.3em ridge var(--blue);
+    border-radius: 6px 6px 6px 6px;
 }
 
-h2.header::before {
-    content: "\2015\2015\2015\2015\2015\2015";
-    color: #134679;
-    margin-left: -12em;
-}
-
-h2.header::after {
-    content: "\2015\2015\2015\2015\2015\2015";
-    color: #134679;
-    margin-right: -12em;
+h3 {
+    color: var(--yellow);
 }
