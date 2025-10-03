@@ -79,3 +79,8 @@ h2.underline {
 h3 {
     color: var(--yellow);
 }
+
+.small-text {
+    font-size: x-small;
+    color: var(--gray-m);
+}
